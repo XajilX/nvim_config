@@ -4,4 +4,6 @@ require('plugins')
 
 require('keybinding')
 
+require('lsp.init')
+
 vim.cmd.colorscheme('one-nvim')
