@@ -6,4 +6,4 @@ require('keybinding')
 
 require('lsp.init')
 
-vim.cmd.colorscheme('one-nvim')
+vim.cmd[[colorscheme tokyonight-storm]]
