@@ -1,6 +1,8 @@
 require('base')
 
-require('plugins')
+require('lazy-conf')
+
+-- require('plugins')
 
 require('keybinding')
 
