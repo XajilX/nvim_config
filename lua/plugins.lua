@@ -2,14 +2,14 @@ require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'folke/tokyonight.nvim'
     use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = require('nvim-tree').setup {}
-    }
-    use {
         'nvim-treesitter/nvim-treesitter',
         run = require('nvim-treesitter.install').update { with_sync = true },
         config = require('plugin-conf.nvim-treesitter')
+    }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = 'nvim-tree/nvim-web-devicons',
+        config = require('nvim-tree').setup {}
     }
 
     use {
