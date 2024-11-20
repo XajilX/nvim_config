@@ -25,7 +25,6 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- import your plugins
-      'wbthomason/packer.nvim',
       'folke/tokyonight.nvim',
       {
           'nvim-tree/nvim-tree.lua',
