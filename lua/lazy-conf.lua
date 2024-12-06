@@ -25,45 +25,52 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- import your plugins
-      'folke/tokyonight.nvim',
-      {
-          'nvim-tree/nvim-tree.lua',
-	  lazy = false,
-          dependencies = { 'nvim-tree/nvim-web-devicons' },
+    'folke/tokyonight.nvim',
+    {
+      'nvim-tree/nvim-tree.lua',
+      lazy = false,
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
 	  config = function()
 	    require'nvim-tree'.setup {}
 	  end
-      },
-      {
-          'nvim-treesitter/nvim-treesitter',
-          build = function()
+    },
+    {
+      'nvim-treesitter/nvim-treesitter',
+      build = function()
 	    require'nvim-treesitter.install'.update { with_sync = true }
 	  end,
-          config = function()
+      config = function()
 	    require'plugin-conf.nvim-treesitter'
 	  end
-      },
-      {
-          'williamboman/mason.nvim',
-          config = function()
-	    require'mason'.setup()
-	  end
-      },
-      'neovim/nvim-lspconfig',
-      'williamboman/mason-lspconfig.nvim',
-      {
-          'hrsh7th/nvim-cmp',
-          config = function()
-	    require'plugin-conf.cmp'
-	  end
-      },
-      'hrsh7th/vim-vsnip',
-      'hrsh7th/cmp-vsnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
-      'rafamadriz/friendly-snippets',
-      'simrat39/rust-tools.nvim'
+    },
+    {
+      'williamboman/mason.nvim',
+      config = function()
+        require'mason'.setup()
+      end
+    },
+    'neovim/nvim-lspconfig',
+    'williamboman/mason-lspconfig.nvim',
+    {
+      'hrsh7th/nvim-cmp',
+      config = function()
+        require'plugin-conf.cmp'
+      end
+    },
+    'hrsh7th/vim-vsnip',
+    'hrsh7th/cmp-vsnip',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
+    'rafamadriz/friendly-snippets',
+    'simrat39/rust-tools.nvim',
+    'github/copilot.vim',
+    {
+      'nmac427/guess-indent.nvim',
+      config = function()
+        require'guess-indent'.setup()
+      end
+    }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
